@@ -1,0 +1,8 @@
+﻿  bfs.cpp
+  dfs.cpp
+  main.cpp
+  matrix.cpp
+C:\Users\David\source\repos\grafer\grafer\matrix.cpp(102,22): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+C:\Users\David\source\repos\grafer\grafer\bfs.cpp(35): warning C4715: '<lambda_d56386d75c8af0d0d088dec190dbe281>::operator()': not all control paths return a value
+  grafer.vcxproj -> C:\Users\David\source\repos\grafer\Debug\grafer.exe
