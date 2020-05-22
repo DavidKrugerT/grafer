@@ -17,7 +17,7 @@ int main()
 	m.displayMatrix();
 
 	/** DFS kollar ifall noderna är sammanhängande */
-	BFS dfs(m, 0);
-	dfs.execute();
+	BFS bfs(m, 0);
+	bfs.execute();
 	m.printNodes();
 }
