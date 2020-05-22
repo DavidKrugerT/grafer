@@ -5,10 +5,32 @@
 #include <istream>
 #include <fstream>
 #include <algorithm>
+#include <queue>
 
 enum token
 {
 	COMMENT, NODE, EDGE, END_OF_FILE
+};
+
+struct Queue
+{
+	std::queue<size_t> data;
+
+	size_t pop() {
+		size_t node = data.front();
+		data.pop();
+		return node;
+	}
+
+	void push(size_t node) {
+		data.push(node);
+	}
+
+
+
+	size_t size() {
+		return data.size();
+	}
 };
 
 struct Node

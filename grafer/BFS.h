@@ -6,11 +6,12 @@ class BFS {
 	
 	size_t currentNodeIndex;
 
-	std::queue<size_t> queue;
+	Queue queue;
 
 	Matrix matrix;
 
 public:
+
 
 	BFS(Matrix& matrix, size_t startNodeIndex);
 

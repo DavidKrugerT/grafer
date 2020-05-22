@@ -4,6 +4,7 @@
 
 #include "matrix.h"
 #include "dfs.h"
+#include "BFS.h"
 #include <iostream>
 #include <string>
 
@@ -16,7 +17,7 @@ int main()
 	m.displayMatrix();
 
 	/** DFS kollar ifall noderna är sammanhängande */
-	//DFS dfs(m, 0);
-	//dfs.execute();
-	//m.printNodes();
+	BFS dfs(m, 0);
+	dfs.execute();
+	m.printNodes();
 }

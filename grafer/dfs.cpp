@@ -27,6 +27,7 @@ void DFS::getNextNode()
 			if(!node->visited) {
 				node->visited = true;
 				return true;
+				std::cout << node;
 			}
 		}
 		return false;

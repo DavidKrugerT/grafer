@@ -10,32 +10,26 @@ bool BFS::execute()
 {
 	while (queue.size() > 0)
 	{
-		
+		currentNodeIndex = queue.pop();
+		getNextNodes();
 	}
 	return true;
 }
 
 void BFS::getNextNodes()
 {
-	auto iterator = std::find_if(matrix.begin(), matrix.end(), [&](std::vector<Edge*>& row)
-	{
+	std::for_each(matrix.begin(), matrix.end(), [&](std::vector<Edge*> row) {
 		Edge* edge = row[currentNodeIndex];
-		if (true)
+		if (edge != nullptr)
 		{
-			if (edge != nullptr)
+			Node* node = edge->n1->id != currentNodeIndex ? edge->n1 : edge->n2;
+			if (!node->visited)
 			{
-				Node* node = edge->n1->id != currentNodeIndex ? edge->n1 : edge->n2;
-				if (!node->visited)
-				{
-					node->visited = true;
-					return true;
-				}
+				node->visited = true;
+				queue.push(node->id);
+				return true;
 			}
 		}
+		return false;
 	});
-
-	if (iterator != matrix.end())
-	{
-		queue.push(iterator - matrix.begin());
-	}
 }
